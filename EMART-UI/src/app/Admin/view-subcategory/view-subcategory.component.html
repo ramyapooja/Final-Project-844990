@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+    <tr>
+        <th>Category Id</th>
+        <th>Subcategory Id</th>
+        <th>Subcategory Name</th>
+        <th>Details</th>
+        <th>GST</th>
+    </tr>
+    <tr *ngFor="let subcat of subcategorylist">
+        <td>{{subcat.categoryId}}</td>
+        <td>{{subcat.subcategoryId}}</td>
+        <td>{{subcat.subcategoryName}}</td>
+        <td>{{subcat.briefDetails}}</td>
+        <td>{{subcat.gst}}</td>
+    </tr>
+</table>

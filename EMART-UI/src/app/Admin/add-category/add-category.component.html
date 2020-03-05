@@ -1,0 +1,28 @@
+
+   <div class="card-md-3">
+       <div class="card-body">
+                <h3 id=t1>Add new Category</h3> 
+    <form [formGroup]="catForm" (ngSubmit)="onSubmit()">
+        
+        
+        <div class="form-group">
+            <label>Category Name</label>
+             <input type="text" formControlName="categoryName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryName.errors }" id=a1/>
+             <div *ngIf="submitted && f.categoryName.errors" class="invalid-feedback">
+            <div *ngIf="f.categoryName.errors.required">Category Name is required</div>
+            </div>
+        </div> 
+        <div class="form-group">
+            <label>Brief Details</label>
+            <input type="textarea" formControlName="briefDetails" class="form-control" />
+        </div>
+            
+            <div class="text-center">
+           
+               <button class="btn btn-primary mr-1" >Add</button>
+               <button class="btn btn-primary mr-1" (click)="Delete()" type="button">Delete</button>
+            </div>
+       </form>
+    </div>
+    </div>
+

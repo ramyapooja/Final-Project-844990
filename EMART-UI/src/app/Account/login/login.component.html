@@ -1,0 +1,97 @@
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<div class="row">
+     <div class="container-fluid"> 
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+   <a class="navbar-brand" [routerLink]="['/home']"><i class="fa fa-fw fa-home"></i>Home</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarText">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item ">
+      <a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span>  About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><span class="glyphicon glyphicon-earphone"></span>  ContactUs</a>
+    </li>  
+  </ul>
+</div>
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </li>
+   </ul>
+   </nav>
+</div>
+</div>
+
+
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="sidenav ">
+                <a href="#"><span class="glyphicon glyphicon-user"></span>  About</a><br><br>
+                <a href="#"><span class="glyphicon glyphicon-earphone"></span>  ContactUs</a><br><br>
+            </div>
+        </div>
+       <div class="col-lg-8">
+        <h3 id=h1>LOGIN PAGE</h3>
+           <div class="jumbotron">
+            
+             <div class="container">
+                
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        
+                        <div class="form-group">
+                            <label>Username</label>
+                             <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+                             <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                            <div *ngIf="f.userName.errors.required">Username is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                             <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                          Buyer  <input type="radio" formControlName="role"  value="buyer" name="role" />
+                      </div> 
+                      <div class="form-group">
+                        Seller  <input type="radio" formControlName="role"  value="seller" name="role" />
+                      </div>
+                        
+                       
+                
+
+                
+               
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1 " id=t1>Login</button>
+                    
+                </div>
+                <br><br>
+                
+      
+            </form>
+        </div>
+        </div>
+    </div>
+   </div>       
+ 
+
+
+<router-outlet></router-outlet>

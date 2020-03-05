@@ -1,0 +1,42 @@
+#i1{
+    font-size: 20px;
+}
+#s1{
+    font-size: 15px;
+}
+
+.sidenav a {
+	margin-top: 30px;
+	padding: 0px 0px 0px 20px;
+	text-decoration: none;
+	font-size: 20px;
+	color: blanchedalmond;
+	display: inline-block;
+}
+.sidenav {
+	height: 90%;
+	width: 220px;
+	position: fixed;
+	z-index: 1;
+	top: 66px;
+	left: 0px;
+	background-color:lightskyblue ;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+#a1
+{
+	width:50%;
+}
+.btn
+{
+	align-items: center;
+}
+.image{
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url("src/assets/images/img1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+}

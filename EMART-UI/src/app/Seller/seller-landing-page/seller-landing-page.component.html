@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+<div class="row">
+  <div class="container-fluid">
+<nav class="navbar navbar-expand-sm navbar-light bg-info">
+    
+    <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
+      <ul class="navbar-nav mr-auto">
+          <li>   <a class="nav-link" href="#"><i class="glyphicon glyphicon-home" id="i1"></i>Seller</a></li>
+        <li class="nav-item" id="s1">
+            <a class="nav-link" [routerLink]="'additems'">Add items </a>
+          </li>
+          <li class="nav-item" id="s1">
+            <a class="nav-link" [routerLink]="'viewitems'">View items</a>
+          </li>
+          <li class="nav-item" id="s1">
+              <a class="nav-link" [routerLink]="'viewprofiles'">View profiles</a>
+            </li>
+            <li class="nav-item" id="s1">
+              <a class="nav-link" [routerLink]="'viewreports'">View reports</a>
+            </li>
+          
+      </ul>
+    </div>
+    <div>
+        <ul class="navbar-nav mr-auto">
+           
+        <li class="nav-item" id="s1">
+            
+            <a class="nav-link" href="#"><i class="glyphicon glyphicon-user" id="i1"></i>MyProfile</a>
+          </li>
+         
+        <li class="nav-item" id="s1">
+            
+            <a class="nav-link" href="#"><i class="glyphicon glyphicon-user" id="i1"></i>Logout</a>
+          </li>
+        </ul>
+          </div>
+    
+          
+        </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+    <div class="sidenav">
+        <a [routerLink]="'additems'">Add items</a>
+        <a [routerLink]="'viewitems'">View items</a>
+        <a [routerLink]="'viewprofiles'">View profiles</a>
+        <a [routerLink]="'viewreports'">View reports</a>
+
+    </div>
+  </div>
+    <div class="col-lg-9">
+      <router-outlet></router-outlet>
+    </div>
+  
+  </div>
+  

@@ -1,0 +1,34 @@
+<div class="container">
+    <form class="form-inline">
+        <input class="form-control" type="search" placeholder="Search for an item" aria-label="Search" >
+        <button class="btn btn-primary" type="submit"  (click)="Search()">Search</button>
+      </form> 
+   <div class="container" [hidden]="isShow">
+     <div class="card">
+       <div class="card-body">
+       <table *ngFor="let p of itemlist">
+         <tr >
+          <td>{{p.img}}</td>
+           
+         </tr>
+         <tr>
+          <td>Item Name:</td>
+          <td>{{p.itemName}}</td>
+         </tr>
+         <tr>
+           <td>Price:</td>
+           <td>{{p.price}}</td>
+         </tr>
+         
+       </table>
+   </div>
+   <div class="card-footer">
+    <div class="text-center">
+      <button class="btn btn-success mr-1" >Buy</button>
+      <button class="btn btn-outline-info" >AddToCart</button>
+  </div>
+  </div>
+  </div>
+</div>
+    
+</div>

@@ -1,0 +1,25 @@
+
+    <div class="card-md-3">
+        <div class="card-body">
+        <h3 id="t1">Block/Unblock Buyer</h3>
+        <br>
+        <br>
+        <form [formGroup]="blockForm" (ngSubmit)="onSubmit()">
+     
+            <div class="form-group">
+                <label>Enter Buyer Id</label>
+                 <input type="text" formControlName="bid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.bid.errors }" id=a1/>
+                 <div *ngIf="submitted && f.bid.errors" class="invalid-feedback">
+                <div *ngIf="f.bid.errors.required">BuyerID is required</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" id="t1">Block</button>
+                
+           
+                <button class="btn btn-primary mr-1" id="t1">Unblock</button>
+                
+            </div>
+       </form>
+    </div>
+</div>

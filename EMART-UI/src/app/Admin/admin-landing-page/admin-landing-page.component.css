@@ -1,0 +1,26 @@
+#i1{
+    font-size: 20px;
+}
+#s1{
+    font-size: 15px;
+}
+
+.sidenav a {
+	margin-top: 30px;
+	padding: 0px 0px 0px 20px;
+	text-decoration: none;
+	font-size: 20px;
+	color: blanchedalmond;
+	display: inline-block;
+}
+.sidenav {
+	height: 90%;
+	width: 220px;
+	position: fixed;
+	z-index: 1;
+	top: 66px;
+	left: 0px;
+	background-color:lightskyblue ;
+	overflow-x: hidden;
+	padding-top: 20px;
+}

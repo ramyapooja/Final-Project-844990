@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from "@angular/forms";
 import { AccountService } from 'src/app/Services/account.service';
-import { Seller } from 'src/app/Models/seller';
-import { Buyer } from 'src/app/Models/buyer';
 import { Router } from '@angular/router';
 import { Token } from 'src/app/Models/token';
 
@@ -16,9 +14,9 @@ export class LoginComponent implements OnInit {
  userName:string;
  password:string;
  loginForm:FormGroup;
- errmsg:string;
-    buyer:Buyer;
-    seller:Seller;
+ msg:string;
+    
+    
     role: any;
     token:Token;
  
@@ -40,7 +38,7 @@ submitted=false;
 onSubmit()
 {
   this.submitted=true;
-  this.Validate();
+  
 }
 public Validate()
 {
@@ -55,6 +53,8 @@ public Validate()
     this.service.BuyerLogin(userName,password).subscribe(res=>{
       console.log(res);
       this.token=res;
+      console.log(this.token);
+      localStorage.setItem('buyerId',this.token.buyerId);
 
       if(this.token.msg=='Success'){
           this.router.navigateByUrl('/buyer');
@@ -70,7 +70,9 @@ if(role=='seller')
 this.service.SellerLogin(userName,password).subscribe(res=>{
   console.log(res)
   this.token=res;
-  if(this.token.msg=="Success"){
+  console.log(this.token);
+  localStorage.setItem('sellerId',this.token.sellerId);
+  if(this.token.msg=='Success'){
     this.router.navigateByUrl("/seller")
   }
   else{
@@ -90,21 +92,21 @@ else{
 }
 }
 }
-Navigate()
-{
-  switch(this.role){
-    case "buyer":
-      this.router.navigateByUrl("buyer");
-      break;
-      case "seller":
-      this.router.navigateByUrl("seller");
-      break;
-      case "admin":
-      this.router.navigateByUrl("admin");
-      break;
-      default:
-        alert("invalid credentials");
+// Navigate()
+// {
+//   switch(this.role){
+//     case "buyer":
+//       this.router.navigateByUrl("buyer");
+//       break;
+//       case "seller":
+//       this.router.navigateByUrl("seller");
+//       break;
+//       case "admin":
+//       this.router.navigateByUrl("admin");
+//       break;
+//       default:
+//         alert("invalid credentials");
 
- }
-}
+//  }
+// }
 }

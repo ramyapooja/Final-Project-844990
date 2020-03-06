@@ -69,7 +69,7 @@ Add()
     this.item=new Items();
     this.item.categoryId=(this.itemForm.value["categoryId"]);
     this.item.subcategoryId=(this.itemForm.value["subcategoryId"]);
-    this.item.sellerId=this.itemForm.value["sellerId"];
+    this.item.sellerId=localStorage.getItem('sellerId');
     this.item.itemId='I'+Math.floor(Math.random()*1000);
     this.item.categoryId=this.itemForm.value["categoryId"];
     this.item.subcategoryId=this.itemForm.value["subcategoryId"];

@@ -26,7 +26,7 @@ export class RegisterSellerComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm=this.formbuilder.group({
-      sellerId:['',Validators.required],
+      sellerId:[''],
      userName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{3,6}$')]],
      emailId:['',[Validators.required,Validators.email]],
      password:['',[Validators.required,Validators.minLength(6)]],
@@ -56,7 +56,7 @@ this.registerForm.reset();
 Add()
   {
     this.item=new Seller();
-    this.item.sellerId=this.registerForm.value["sellerId"];
+    this.item.sellerId='S'+Math.round(Math.random()*1000);
     this.item.userName=this.registerForm.value["userName"];
     this.item.password=this.registerForm.value["password"];
     this.item.companyName=this.registerForm.value["companyName"];

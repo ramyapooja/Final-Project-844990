@@ -34,6 +34,14 @@ namespace EMart.BuyerService
 
             services.AddTransient<IBuyerRepository, BuyerRepository>();
             services.AddControllers();
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+                 options.AllowAnyOrigin()
+                         .AllowAnyMethod()
+                         .AllowAnyHeader()
+                         );
+            });
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddAuthentication(options =>
             {
@@ -64,6 +72,7 @@ namespace EMart.BuyerService
             }
 
             app.UseRouting();
+            app.UseCors("AllowOrigin");
 
             app.UseAuthorization();
            // app.UseAuthentication();

@@ -52,14 +52,6 @@
              <div class="container">
                 
                     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                        
-                        <div class="form-group">
-                            <label>ID</label>
-                             <input type="text" formControlName="sellerId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sellerId.errors }" />
-                             <div *ngIf="submitted && f.sellerId.errors" class="invalid-feedback">
-                            <div *ngIf="f.sellerId.errors.required">ID is required</div>
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label>NAME</label>
                              <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />

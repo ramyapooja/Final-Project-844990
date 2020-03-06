@@ -26,6 +26,7 @@ import { ViewProfilesComponent } from './Seller/view-profiles/view-profiles.comp
 import { HomeComponent } from './Account/home/home.component';
 import { ViewCategoryComponent } from './Admin/view-category/view-category.component';
 import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcategory.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path:'viewitems',component:ViewItemsComponent},
     {path:'viewreports',component:ViewReportsComponent},
     {path:'viewprofiles',component:ViewProfilesComponent}
+    
   ]},
   {path:'buyer',component:BuyerLandingPageComponent,children:[
     {path:'search',component:SearchComponent},
@@ -54,10 +56,11 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
     {path:'login',component:LoginComponent},
   {path:'registerseller',component:RegisterSellerComponent},
-  {path:'registerbuyer',component:RegisterBuyerComponent}
+  {path:'registerbuyer',component:RegisterBuyerComponent},
+  {path:'logout',component:LogoutComponent},
   
   
-  //{path:'',redirectTo:'login',pathMatch:"full"}
+  {path:'',redirectTo:'home',pathMatch:"full"}
 ];
 
 @NgModule({

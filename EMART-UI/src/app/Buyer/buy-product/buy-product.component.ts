@@ -3,6 +3,7 @@ import { Items } from 'src/app/Models/items';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { BuyerService } from 'src/app/Services/buyer.service';
 import { Router } from '@angular/router';
+import { TransactionHistory } from 'src/app/Models/transaction-history';
 
 @Component({
   selector: 'app-buy-product',
@@ -10,29 +11,51 @@ import { Router } from '@angular/router';
   styleUrls: ['./buy-product.component.css']
 })
 export class BuyProductComponent implements OnInit {
-
-  isShow:boolean=true;
   item:Items;
   itemlist:Items[];
   buyerForm:FormGroup;
+  tobj:TransactionHistory;
   constructor(private formbuilder:FormBuilder,private service:BuyerService,private route:Router) { }
 
   ngOnInit() {
     this.buyerForm=this.formbuilder.group({
-      img:[''],
-      itemName:[''],
-      price:['']
+      
+      
+      
+      transactionType:[''],
+      
+      numberOfItems:[''],
+      dateTime:[''],
+      remarks:[''],
+      cardnumber:[''],
+      cvv:[''],
+      ed:[''],
+      name:['']
     });
+    this.item=JSON.parse(localStorage.getItem('item'));
+    console.log(this.item);
+    console.log(this.item.itemId);
+    
   }
-  Search()
-  {
-    this.isShow=!this.isShow;
-    let name=this.buyerForm.value["itemName"];
-    this.service.SearchItems(name).subscribe(res=>{
-      this.itemlist=res;
-      console.log(this.item);
-     
-  })
-  }
+ onSubmit()
+ {
+   this.tobj=new TransactionHistory();
+   this.tobj.id='T'+Math.floor(Math.random()*1000);
+   this.tobj.transactionId=this.tobj.id;
+   this.tobj.buyerId=localStorage.getItem('buyerId');
+   this.tobj.sellerId=this.item.sellerId;
+   this.tobj.numberOfItems=this.buyerForm.value['numberOfItems'];
+   this.tobj.itemId=this.item.itemId;
+   this.tobj.transactionType=this.buyerForm.value['transactionType'];
+   this.tobj.dateTime=this.buyerForm.value['dateTime'];
+   this.tobj.remarks=this.buyerForm.value['remarks'];
+   console.log(this.tobj);
+     this.service.BuyItem(this.tobj).subscribe(res=>{
+       console.log("Purchase was Sucessfull");
+       alert('Purchase Done Successfully');
+     })
+
+
+ }
 
 }

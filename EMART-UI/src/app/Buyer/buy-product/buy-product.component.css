@@ -7,3 +7,6 @@
     size: 100px;
     align-items: center;
 }
+.card{
+    background-color: rgba(223, 188, 190, 0.65);
+}

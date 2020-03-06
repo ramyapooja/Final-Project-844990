@@ -1,34 +1,49 @@
-<div class="container">
-    <form class="form-inline">
-        <input class="form-control" type="search" placeholder="Search for an item" aria-label="Search" >
-        <button class="btn btn-primary" type="submit"  (click)="Search()">Search</button>
-      </form> 
-   <div class="container" [hidden]="isShow">
-     <div class="card">
-       <div class="card-body">
-       <table *ngFor="let p of itemlist">
-         <tr >
-          <td>{{p.img}}</td>
-           
-         </tr>
-         <tr>
-          <td>Item Name:</td>
-          <td>{{p.itemName}}</td>
-         </tr>
-         <tr>
-           <td>Price:</td>
-           <td>{{p.price}}</td>
-         </tr>
-         
-       </table>
-   </div>
-   <div class="card-footer">
-    <div class="text-center">
-      <button class="btn btn-success mr-1" >Buy</button>
-      <button class="btn btn-outline-info" >AddToCart</button>
+<div class="card card-signin my-5 " style="float:right">
+  <h5 class="card-header text-center" style="color: whitesmoke;">Payment</h5>
+      <div class="card-body">
+          <form [formGroup]="buyerForm" (ngSubmit)="onSubmit()">    
+                <div class="form-group">
+                  <label>Number Of Items</label>
+                  <input type="text" formControlName="numberOfItems" class="form-control" autofocus/>
+                </div>
+                <div class="form-group">
+                  <label >Date</label>
+                  <input type="date" formControlName="dateTime" class="form-control"/>
+                </div>
+              <div class="form-group">
+                  <label >Choose PayMent Mode</label>
+                  <select formControlName="transactionType">
+                      <option value="credit">Credit Card</option>
+                      <option value="debit">Debit Card</option>
+                      <option value="cod">Cash On Delivery</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Card Number</label>
+                  <input type="text" formControlName="cardnumber" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label>CVV</label>
+                  <input type="number" formControlName="cvv" class="form-control" style="width: 30%;"/>
+                </div>
+                <div class="form-group">
+                  <label>ExpiryDate</label>
+                  <input type="date" formControlName="ed" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label>Card Holders Name</label>
+                  <input type="text" formControlName="name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label>Remarks</label>
+                  <input type="text" formControlName="remarks" class="form-control"/>
+                </div>
+              <hr class="my-4 bg-success"/>
+              <div class="form-group">
+                  <div class="text-center">
+                      <button type="submit" class="btn btn-primary mr-1">Purchase</button>
+                  </div>
+              </div>
+          </form>
+      </div>
   </div>
-  </div>
-  </div>
-</div>
-    
-</div>

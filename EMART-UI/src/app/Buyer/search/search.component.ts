@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
 item:Items;
 itemlist:Items[];
 itemName:string;
-  constructor(private builder:FormBuilder,private service:BuyerService) { }
+  constructor(private builder:FormBuilder,private service:BuyerService,private route:Router) { }
 
   ngOnInit() {
     this.buyerForm=this.builder.group({
@@ -30,5 +30,10 @@ itemName:string;
         this.itemlist=res;
         console.log(this.itemlist);
   })
+}
+Buy(item:Items)
+{
+  localStorage.setItem('item',JSON.stringify(item));
+  this.route.navigateByUrl('/buyer/buyproduct');
 }
 }

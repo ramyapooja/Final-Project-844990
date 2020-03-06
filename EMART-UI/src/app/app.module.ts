@@ -32,6 +32,7 @@ import { SellerService } from './Services/seller.service';
 import { ItemService } from './Services/item.service';
 import { ViewCategoryComponent } from './Admin/view-category/view-category.component';
 import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcategory.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -61,7 +62,8 @@ import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcateg
     ViewProfilesComponent,
     HomeComponent,
     ViewCategoryComponent,
-    ViewSubcategoryComponent
+    ViewSubcategoryComponent,
+    LogoutComponent
     
     
     

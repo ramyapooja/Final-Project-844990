@@ -22,5 +22,6 @@ namespace EMart.BuyerService.Repositories
 
         List<Category> GetCategory();
         List<SubCategory> SubCategory(string catid);
+
     }
 }

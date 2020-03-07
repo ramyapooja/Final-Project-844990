@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+    <div class="bgimage">
 <div class="row">
   <div class="container-fluid">
-<nav class="navbar navbar-expand-sm navbar-light bg-info">
+<nav class="navbar navbar-expand-sm navbar-light ">
     
     <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,19 +47,10 @@
         </nav>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-3">
-    <div class="sidenav">
-        <a [routerLink]="'additems'">Add items</a>
-        <a [routerLink]="'viewitems'">View items</a>
-        <a [routerLink]="'viewprofiles'">View profiles</a>
-        <a [routerLink]="'viewreports'">View reports</a>
-
-    </div>
-  </div>
-    <div class="col-lg-9">
+      
+    <div>
       <router-outlet></router-outlet>
+    
     </div>
-  
   </div>
   

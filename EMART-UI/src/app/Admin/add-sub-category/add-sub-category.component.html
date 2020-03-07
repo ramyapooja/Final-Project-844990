@@ -1,7 +1,9 @@
-
+<div class="container">
    <div class="card-md-3">
     <div class="card-body">
              <h3 id=t1>Add new SubCategory</h3>
+             <br>
+             <br><br>
  <form [formGroup]="subcatForm" (ngSubmit)="onSubmit()">
      
      
@@ -14,15 +16,15 @@
      </div> 
      <div class="form-group">
         <label>Select Category</label>
-             <select formControlName="categoryName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryName.errors }" id="b" >
+             <select formControlName="categoryName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryName.errors }" id="a1" >
               <option *ngFor="let lst of categorylist" [value]="lst.categoryId">{{lst.categoryName}}</option>
               </select>
               <div *ngIf="submitted && f.categoryName.errors" class="invalid-feedback">
               </div>
     </div>
     <div class="form-group">
-        <label>Brief Details</label>
-        <input type="text" formControlName="briefDetails" class="form-control" />
+        <label>Details</label>
+        <textarea rows="5" formControlName="briefDetails" class="form-control" id=a1></textarea>
         
     </div>
     <div class="form-group">
@@ -41,4 +43,4 @@
     </form>
  </div>
  </div>
-
+</div>

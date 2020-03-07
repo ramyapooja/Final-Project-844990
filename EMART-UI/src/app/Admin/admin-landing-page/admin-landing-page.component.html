@@ -4,9 +4,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <div class="bgimage">
     <div class="row">
       <div class="container-fluid">
-<nav class="navbar navbar-expand-sm navbar-light bg-info">
+<nav class="navbar navbar-expand-sm navbar-light">
     
     <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,9 +25,7 @@
           <li class="nav-item" id="s1">
             <a class="nav-link" [routerLink]="'viewcategory'">Categories</a>
           </li>
-          <li class="nav-item" id="s1">
-            <a class="nav-link" [routerLink]="'viewsubcategory'">SubCategories</a>
-          </li>
+         
           
           <li class="nav-item" id="s1">
               <a class="nav-link" [routerLink]="'block-unblock-buyer'">Block/Unblock Buyer</a>
@@ -58,20 +57,11 @@
         </nav>
       </div>
     </div>
-        <div class="row">
-          <div class="col-lg-4">
-    <div class="sidenav">
-      
-        <a [routerLink]="'addcategory'">Add Category</a>  <br>
-        <a [routerLink]="'addsubcategory'">Add subcategory</a>
-        <a [routerLink]="'block-unblock-buyer'">Block/Unblock Buyer</a>
-        <a [routerLink]="'block-unblock-seller'">Block/Unblock Seller</a>
-        <a href="#">Daily Report</a>
-
-    </div>
-  </div>
-  <div class="col-lg-8">
+        
+          
+  <div >
     <router-outlet></router-outlet>
+    
     </div>
     </div>
     

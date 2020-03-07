@@ -51,6 +51,11 @@ buyer:Buyer;
   {
     return this.viewprofileForm.controls;
   }
+  onreset()
+{
+this.submitted=false;
+this.viewprofileForm.reset();
+}
   EditProfile()
 {
   this.buyer=new Buyer();

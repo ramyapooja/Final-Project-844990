@@ -1,3 +1,4 @@
+<div class="container">
 <div class='bold-line'></div>
       <div class='window'>
         <div class='overlay'></div>
@@ -6,22 +7,22 @@
           <form [formGroup]="viewprofileForm" (ngSubmit)="onSubmit()">
             <div class="input-fields">
               <label>ID</label>
-              <input type="text" formControlName="buyerId" placeholder="Enter ID" readonly class="form-control input-line full-width" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+              <input type="text" formControlName="buyerId" placeholder="Enter ID" readonly class="form-control" [ngClass]="{ 'is-invalid': submitted && f.buyerId.errors }" id=a/>
                 
                 <label>NAME</label>
-                <input type="text" formControlName="userName"placeholder="Enter Name" class="form-control input-line full-width" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                <input type="text" formControlName="userName"placeholder="Enter Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" id=a/>
                  
               <label>Password</label>
-              <input type="password" formControlName="password" placeholder="Enter Password" class="form-control input-line full-width" [ngClass]="{ 'is-invalid': submitted && f.pwd.errors }" />
+              <input type="password" formControlName="password" placeholder="Enter Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id=a/>
                 
               <label>EMAIL</label>
-                <input type="text" formControlName="emailId" placeholder="Enter Email" class="form-control input-line full-width" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <input type="text" formControlName="emailId" placeholder="Enter Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }" id=a />
                 
                 <label>MOBILE</label>
-                <input type="text" formControlName="mobileNo" placeholder="Enter Mobile Number" class="form-control input-line full-width" [ngClass]="{ 'is-invalid': submitted && f.phn.errors }" />
+                <input type="text" formControlName="mobileNo" placeholder="Enter Mobile Number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }" id=a/>
                 
                <label>Date</label>
-                <input type="text" formControlName="createdDateTime" placeholder="Enter Date" class="form-control input-line full-width" />
+                <input type="text" formControlName="createdDateTime" placeholder="Enter Date" class="form-control" id=a/>
                 
             </div>
               <br><br>
@@ -32,4 +33,5 @@
             </div>
           </form>
         </div>
+      </div>
       </div>

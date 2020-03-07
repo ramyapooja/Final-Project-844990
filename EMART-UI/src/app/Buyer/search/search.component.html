@@ -12,7 +12,7 @@
         <div class="card-deck" *ngFor="let item of itemlist">
         <div class="card bg-grey" style="width: 18rem;">
           <img  src="assets/images/{{item.img}}" alt="{{item.itemName}}" height="100px" width="175px">
-          <h5 class="card-title" style="color: black;">{{item.itemName}}</h5>
+          <h5 class="card-title" style="color: black;align-items: center;">{{item.itemName}}</h5>
           <div class="card-body" style="color: black;">
             
             Price: {{item.price}}<br/>
@@ -21,7 +21,7 @@
               <br/>
                <br/>
               <button type="button" class="btn btn-primary" (click)="Buy(item)">Buy Now</button>&nbsp;
-              <button type="button" class="btn btn-primary">AddToCart</button> 
+              <button type="button" class="btn btn-primary" (click)="AddtoCart(item)">AddToCart</button> 
             </div>
             </div>
         </div>

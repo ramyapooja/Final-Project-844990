@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Emart.AccountService.Repositories;
+using EMart.AccountService.Repositories;
 using EMart.AccountService.Models;
 using EMart.AccountService.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

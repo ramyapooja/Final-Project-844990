@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Emart.AccountService.Repositories
+namespace EMart.AccountService.Repositories
 {
     public class AccountRepository : IAccountRepository
     {

@@ -15,6 +15,8 @@ namespace EMart.AdminService.Repositories
         public List<SubCategory> GetSubcategory();
         Category GetCatById(string categoryId);
         void UpdateCategory(Category obj);
+        SubCategory GetSubcatById(string SubcategoryId);
+        void UpdateSubcategory(SubCategory obj);
         
 
     }

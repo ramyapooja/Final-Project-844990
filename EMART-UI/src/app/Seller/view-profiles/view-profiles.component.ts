@@ -68,7 +68,7 @@ item:Seller;
     }
   get f() {return this.editForm.controls;}
 
-  onreset()
+  onReset()
   {
   this.submitted=false;
   this.editForm.reset();

@@ -7,6 +7,7 @@ using EMart.BuyerService.Models;
 
 namespace EMart.Test
 {
+    [TestFixture]
     class TestBuyerService
     {
         BuyerRepository _repo;
@@ -27,7 +28,7 @@ namespace EMart.Test
         public void TestEditProfile()
         {
             Buyer buyer = _repo.GetProfile("1");
-            buyer.MobileNo = "9898989898";
+            buyer.MobileNo = "8181818181";
             _repo.EditProfile(buyer);
             Buyer buyer1 = _repo.GetProfile("1");
             Assert.AreSame(buyer, buyer1);
@@ -95,10 +96,30 @@ namespace EMart.Test
                 Price="80000",
                 Description="",
                 StockNumber="5",
-                Img="ac.jpg"
+                Img="ac.jpg",
+                BuyerId="1"
             }
                 );
+            var result = _repo.ViewCart("1", "I443");
+            Assert.IsNotNull(result);
             
         }
+        [Test]
+        [Description("Test DeleteCartItems()")]
+        public void TestDeleteCartItems()
+        {
+            _repo.DeleteCartItems("C511");
+            var result = _repo.GetCartItem("C325");
+
+            Assert.Null(result);
+        }
+        [Test]
+        [Description("Test GetCartItems(BuyerId)")]
+        public void TestGetCartItem()
+        {
+            var result = _repo.GetCartItems("B4");
+            Assert.IsNotNull(result);
+        }
+
     }
 }

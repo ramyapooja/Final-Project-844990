@@ -51,7 +51,7 @@ buyer:Buyer;
   {
     return this.viewprofileForm.controls;
   }
-  onreset()
+  onReset()
 {
 this.submitted=false;
 this.viewprofileForm.reset();

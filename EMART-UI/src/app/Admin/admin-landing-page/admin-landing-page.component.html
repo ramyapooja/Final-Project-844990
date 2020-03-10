@@ -9,11 +9,11 @@
       <div class="container-fluid">
 <nav class="navbar navbar-expand-sm navbar-light">
     
-    <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler"  type="button" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
+    <div class="navbar-collapse" >
       <ul class="navbar-nav mr-auto">
           <li>   <a class="nav-link" href="#"><i class="glyphicon glyphicon-home" id="i1"></i>Admin</a></li>
         <li class="nav-item" id="s1">
@@ -48,7 +48,7 @@
          
         <li class="nav-item" id="s1">
             
-            <a class="nav-link" href="#"><i class="glyphicon glyphicon-user" id="i1"></i>Logout</a>
+            <a class="nav-link" [routerLink]="'logout'"><i class="glyphicon glyphicon-user" id="i1"></i>Logout</a>
           </li>
         </ul>
           </div>

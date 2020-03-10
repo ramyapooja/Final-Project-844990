@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TransactionHistory } from 'src/app/Models/transaction-history';
 
 @Component({
   selector: 'app-purchase-history',
@@ -7,6 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchaseHistoryComponent implements OnInit {
 
+  thlist:TransactionHistory[];
+  constructor(private service:BuyerService,private route:Router) { 
+    let bid=localStorage.getItem('buyerId');
+    this.service.GetPurchaseHistory(bid).subscribe(res=>{
+      this.thlist=res;
+      console.log(this.thlist);
+    })
+  });
+  }
   constructor() { }
 
   ngOnInit() {

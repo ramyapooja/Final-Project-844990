@@ -82,6 +82,10 @@ namespace EMart.AdminService.Models
                     .HasMaxLength(10)
                     .IsUnicode(false);
 
+                entity.Property(e => e.BuyerId)
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.CategoryId)
                     .HasMaxLength(5)
                     .IsUnicode(false);
@@ -122,6 +126,11 @@ namespace EMart.AdminService.Models
                 entity.Property(e => e.SubcategoryId)
                     .HasMaxLength(5)
                     .IsUnicode(false);
+
+                entity.HasOne(d => d.Buyer)
+                    .WithMany(p => p.Cart)
+                    .HasForeignKey(d => d.BuyerId)
+                    .HasConstraintName("FK__Cart__BuyerId__48CFD27E");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Cart)

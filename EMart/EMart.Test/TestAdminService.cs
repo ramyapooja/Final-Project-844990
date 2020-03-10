@@ -8,6 +8,7 @@ using NUnit.Framework;
 
 namespace EMart.Test
 {
+    [TestFixture]
     class TestAdminService
     {
         AdminRepository _repo;

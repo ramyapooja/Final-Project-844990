@@ -188,7 +188,45 @@ namespace EMart.BuyerService.Controllers
                 return NotFound(ex.Message);
             }
         }
-
+        [HttpGet]
+        [Route("GetCartItems")]
+        public IActionResult GetCartItems(string bid)
+        {
+            try
+            {
+                return Ok(_ibuyrepo.GetCartItems(bid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+       [HttpGet]
+       
+        public IActionResult GetCartItem(string cartid)
+        {
+            try
+            {
+                return Ok(_ibuyrepo.GetCartItem(cartid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetCount/{buyerid}")]
+        public IActionResult GetCount(string buyerid)
+        {
+            try
+            {
+                return Ok(_ibuyrepo.GetCount(buyerid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
 
     }
 }

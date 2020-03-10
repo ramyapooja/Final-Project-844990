@@ -26,6 +26,10 @@ namespace EMart.BuyerService.Repositories
         void AddtoCart(Cart cart);
         List<Cart> GetCartItems();
         void DeleteCartItems(string Id);
+        bool ViewCart(string bid, string itemid);
+        List<Cart> GetCartItems(string bid);
+        Cart GetCartItem(string cartid);
+        int GetCount(string bid);
 
     }
 }

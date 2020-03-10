@@ -7,6 +7,7 @@ using EMart.SellerService.Models;
 
 namespace EMart.Test
 {
+    [TestFixture]
     class TestSellerService
     {
         SellerRepository _repo;

@@ -35,6 +35,17 @@ h{
 	background-repeat: no-repeat;
 	background-size: cover;
   }
+  .img-container{
+	  
+	  margin:24px 0 12px 0;
+	  
+  }
+  #i{
+	border-image: url("src/assets/images/login.png");
+	width: 10%;
+  border-radius: 10%;
+  }
+ 
 #a1
 {
 	width:50%;

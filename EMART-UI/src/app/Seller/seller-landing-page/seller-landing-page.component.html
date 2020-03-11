@@ -20,11 +20,11 @@
             <a class="nav-link" [routerLink]="'viewitems'">View items</a>
           </li>
           <li class="nav-item" id="s1">
-              <a class="nav-link" [routerLink]="'viewprofiles'">View profiles</a>
+              <a class="nav-link" [routerLink]="'viewprofiles'">View profile</a>
             </li>
-            <li class="nav-item" id="s1">
+            <!-- <li class="nav-item" id="s1">
               <a class="nav-link" [routerLink]="'viewreports'">View reports</a>
-            </li>
+            </li> -->
           
       </ul>
     </div>
@@ -33,12 +33,12 @@
            
         <li class="nav-item" id="s1">
             
-            <a class="nav-link" href="#"><i class="glyphicon glyphicon-user" id="i1"></i>MyProfile</a>
+            <a class="nav-link" [routerLink]="'viewprofiles'"><i class="glyphicon glyphicon-user" id="i1"></i>MyProfile</a>
           </li>
          
         <li class="nav-item" id="s1">
             
-            <a class="nav-link" [routerLink]="'logout'"><i class="glyphicon glyphicon-user" id="i1"></i>Logout</a>
+            <a class="nav-link" [routerLink]="['/logout']"><i class="glyphicon glyphicon-user" id="i1"></i>Logout</a>
           </li>
         </ul>
           </div>

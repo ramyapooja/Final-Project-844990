@@ -1,12 +1,16 @@
-<div class="jumbotron">
+
             
     <div class="container">
-       
+        <div class='bold-line'></div>
+        <div class='window'>
+          <div class='overlay'></div>
+          <div class='content'>
+            
            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
                
                <div class="form-group">
                    <label>ID</label>
-                    <input type="text" formControlName="sellerId" placeholder="Enter SellerId" class="form-control"  />
+                    <input type="text" formControlName="sellerId" readonly placeholder="Enter SellerId" class="form-control"  />
                     
                    
                </div>
@@ -62,5 +66,7 @@
        <br><br>
        
    </form>
-</div>
+   </div>
+   </div>
+   
 </div>

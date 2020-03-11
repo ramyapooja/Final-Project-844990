@@ -10,7 +10,7 @@ import { ViewReportsComponent } from './Seller/view-reports/view-reports.compone
 import { BuyerLandingPageComponent } from './Buyer/buyer-landing-page/buyer-landing-page.component';
 import { SearchComponent } from './Buyer/search/search.component';
 import { ViewCartComponent } from './Buyer/view-cart/view-cart.component';
-import { PurchaseHistoryComponent } from './Buyer/purchase-history/purchase-history.component';
+
 import { BuyProductComponent } from './Buyer/buy-product/buy-product.component';
 import { AdminLandingPageComponent } from './Admin/admin-landing-page/admin-landing-page.component';
 import { BlockUnblockBuyerComponent } from './Admin/block-unblock-buyer/block-unblock-buyer.component';
@@ -40,7 +40,7 @@ const routes: Routes = [
   {path:'buyer',component:BuyerLandingPageComponent,children:[
     {path:'search',component:SearchComponent},
     {path:'viewcart',component:ViewCartComponent},
-    {path:'purchasehistory',component:PurchaseHistoryComponent},
+    
     {path:'buyproduct',component:BuyProductComponent},
     {path:'viewprofile',component:ViewProfileComponent}
   ]},

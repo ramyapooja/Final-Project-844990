@@ -13,7 +13,7 @@ import { ViewProfileComponent } from './Buyer/view-profile/view-profile.componen
 import { BuyerLandingPageComponent } from './Buyer/buyer-landing-page/buyer-landing-page.component';
 import { SearchComponent } from './Buyer/search/search.component';
 import { ViewCartComponent } from './Buyer/view-cart/view-cart.component';
-import { PurchaseHistoryComponent } from './Buyer/purchase-history/purchase-history.component';
+
 import { BuyProductComponent } from './Buyer/buy-product/buy-product.component';
 import { AdminLandingPageComponent } from './Admin/admin-landing-page/admin-landing-page.component';
 import { AddCategoryComponent } from './Admin/add-category/add-category.component';
@@ -48,7 +48,7 @@ import { LogoutComponent } from './logout/logout.component';
     BuyerLandingPageComponent,
     SearchComponent,
     ViewCartComponent,
-    PurchaseHistoryComponent,
+    
     BuyProductComponent,
     AdminLandingPageComponent,
     AddCategoryComponent,

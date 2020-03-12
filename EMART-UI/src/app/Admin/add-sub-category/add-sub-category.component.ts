@@ -26,10 +26,10 @@ export class AddSubCategoryComponent implements OnInit {
     ngOnInit() {
       this.subcatForm=this.formbuilder.group({
         
-        subcategoryName:['',Validators.required],
+        subcategoryName:['',Validators.required,Validators.pattern('^[a-zA-Z]{3,6}$')],
         categoryName:[''],
         briefDetails:[''],
-        gst:['',Validators.required]
+        gst:['',Validators.required,Validators.pattern('^[0-9]{5}$')]
       });
     }
     onSubmit()

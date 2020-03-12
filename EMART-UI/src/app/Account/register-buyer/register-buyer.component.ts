@@ -28,9 +28,9 @@ item:Buyer;
   ngOnInit() {
     this.registerForm=this.formbuilder.group({
       
-      userName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{3,6}$')]],
+      userName:['',[Validators.required,Validators.pattern('^[a-z0-9A-Z]{3,20}$')]],
       emailId:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required,Validators.minLength(6)]],
+      password:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9`!@#$%^&*()_+=]{6,15}$')]],
       mobileNo:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
       createdDateTime:['',Validators.required]
      

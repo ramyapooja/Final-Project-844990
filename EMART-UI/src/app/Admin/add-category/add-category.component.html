@@ -1,4 +1,6 @@
+<div class="bgimage">
 <div class="container">
+    <div class="card offset-10" style="width: 30rem;align-items: center;" >
    <div class="card-md-3">
        <div class="card-body">
                 <h3 id=t1>Add new Category</h3> 
@@ -12,6 +14,7 @@
              <input type="text" formControlName="categoryName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryName.errors }" id=a1/>
              <div *ngIf="submitted && f.categoryName.errors" class="invalid-feedback">
             <div *ngIf="f.categoryName.errors.required">Category Name is required</div>
+            <div *ngIf="f.categoryName.errors.pattern">Invalid format</div>
             </div>
         </div> 
         <div class="form-group">
@@ -28,4 +31,5 @@
     </div>
     </div>
     </div>
-
+</div>
+</div>

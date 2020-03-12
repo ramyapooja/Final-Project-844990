@@ -29,10 +29,15 @@
 </div>
 <br><br><br>
     <div class="row">
+      <div class="col-3">
         <div class="container">
-                
+          <div class="card" style="width: 30rem;align-items: center;" >
                     <form [formGroup]="loginForm" (ngSubmit)="Validate()">
-                        
+                      <div class="img-container">
+                        <img src="login.png" class="card-img-top" id=i alt="image" >
+         
+                      </div>
+                      <div class="card-body">
                         <div class="form-group">
                             <label>Username</label>
                              <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" id=a/>
@@ -60,10 +65,10 @@
                     </div>
                     <br><br>
                 
-      
+                  </div>
                   </form>
-              
-              
+              </div>
+              </div>
           </div>
          </div>         
          <router-outlet></router-outlet>

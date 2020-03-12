@@ -46,10 +46,10 @@ export class AddItemsComponent implements OnInit {
       
       categoryId:[''],
       subcategoryId:[''],
-      price:['',Validators.required],
-      itemName:['',Validators.required],
+      price:['',[Validators.required,Validators.pattern('^[0-9]{9}$')]],
+      itemName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{3,15}$')]],
       description:[''],
-      stockNumber:['',Validators.required],
+      stockNumber:['',[Validators.required],Validators.pattern('^[0-9]{5}$')],
       remarks:[''],
       img:['']
     });

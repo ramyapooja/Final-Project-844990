@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Items } from 'src/app/Models/items';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BuyerService } from 'src/app/Services/buyer.service';
 import { Router } from '@angular/router';
 import { TransactionHistory } from 'src/app/Models/transaction-history';
@@ -20,17 +20,14 @@ export class BuyProductComponent implements OnInit {
   ngOnInit() {
     this.buyerForm=this.formbuilder.group({
       
-      
-      
-      transactionType:[''],
-      
-      numberOfItems:[''],
-      dateTime:[''],
-      remarks:[''],
-      cardnumber:[''],
-      cvv:[''],
-      ed:[''],
-      name:['']
+    numberOfItems:['',Validators.required],
+    transactionType:[''],
+      dateTime:['',Validators.required],
+      remarks:['',Validators.required],
+      cardnumber:['',Validators.required],
+      cvv:['',Validators.required],
+      ed:['',Validators.required],
+      name:['',Validators.required]
     });
     this.item=JSON.parse(localStorage.getItem('item'));
     console.log(this.item);
@@ -56,6 +53,10 @@ export class BuyProductComponent implements OnInit {
      })
 
 
+ }
+ get f()
+ {
+   return this.buyerForm.controls;
  }
 
 }

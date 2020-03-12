@@ -20,7 +20,7 @@ list:Category[];
   ngOnInit() {
     this.catForm=this.formbuilder.group({
       categoryId:['',Validators.required],
-      categoryName:['',Validators.required],
+      categoryName:['',Validators.required,Validators.pattern('^[a-zA-Z]{3,6}$')],
       briefDetails:['']
     });
   }

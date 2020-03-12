@@ -9,15 +9,28 @@
 .bgimage {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	background-image: url("src/assets/images/bg3.jpg");
-	height: 700pt;
+	background-image: url("src/assets/images/home.jpg");
+	height: 700px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
   }
+  .card{
+	background-image: url("src/assets/images/card.png");
+}
+.img-container{
+	  
+    margin:24px 0 12px 0;
+    
+}
+#i{
+  border-image: url("src/assets/images/login.png");
+  width: 20%;
+border-radius: 20%;
+}
   #a
   {
-      width:50%;
+      width:90%;
   }
   .container{
     align-self: center;

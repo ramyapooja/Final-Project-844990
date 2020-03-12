@@ -1,4 +1,7 @@
-<div class="card-md-3">
+<div class="bgimage">
+    <div class="container">
+        <div class="card offset-9" style="width: 20rem;align-items: center;" >
+<div class="card">
     <div class="card-body">
     <h3 id="t1">Add new item</h3>
     <br>
@@ -28,6 +31,7 @@
              <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" id=a1/>
              <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
             <div *ngIf="f.price.errors.required">Item price is required</div>
+            <div *ngIf="f.price.errors.pattern">Invalid format</div>
             </div>
         </div>
         <div class="form-group">
@@ -35,6 +39,7 @@
              <input type="text" formControlName="itemName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemName.errors }" id=a1/>
              <div *ngIf="submitted && f.itemName.errors" class="invalid-feedback">
             <div *ngIf="f.itemName.errors.required">Item name is required</div>
+            <div *ngIf="f.itemName.errors.pattern">Invalid item name</div>
             </div>
         </div>
         <div class="form-group">
@@ -49,6 +54,7 @@
              <input type="text" formControlName="stockNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stockNumber.errors }" id=a1/>
              <div *ngIf="submitted && f.stockNumber.errors" class="invalid-feedback">
             <div *ngIf="f.stockNumber.errors.required">Stock count is required</div>
+            <div *ngIf="f.stockNumber.errors.pattern">Invalid stock number</div>
             </div>
         </div>
         <div class="form-group">
@@ -76,5 +82,8 @@
          </div>
     </form>
     </div>
+</div>
+</div>
+</div>
 </div>
 </div>

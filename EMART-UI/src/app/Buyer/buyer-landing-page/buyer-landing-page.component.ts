@@ -14,7 +14,7 @@ export class BuyerLandingPageComponent implements OnInit {
   list:Items[];
   user:string;
   constructor(private route:Router,private service:BuyerService) {
-    if(!(localStorage.getItem('token'))){
+    if(!(localStorage.getItem('token3'))){
       this.route.navigateByUrl('/home');
     }
     let bid=localStorage.getItem('buyerId');
@@ -30,7 +30,7 @@ export class BuyerLandingPageComponent implements OnInit {
   {
     localStorage.clear();
     localStorage.removeItem('buyerId');
-    localStorage.removeItem('token');
+    localStorage.removeItem('token3');
     localStorage.removeItem('sellerId');
     this.route.navigateByUrl('/home');
   }

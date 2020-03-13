@@ -11,7 +11,7 @@ export class SellerLandingPageComponent implements OnInit {
   
 
   constructor(private route:Router) {
-    if(!(localStorage.getItem('token'))){
+    if(!(localStorage.getItem('token1'))){
       this.route.navigateByUrl('/home');
     }
    }
@@ -22,7 +22,7 @@ export class SellerLandingPageComponent implements OnInit {
   {
     localStorage.clear();
     localStorage.removeItem('buyerId');
-    localStorage.removeItem('token');
+    localStorage.removeItem('token1');
     localStorage.removeItem('sellerId');
     this.route.navigateByUrl('/home');
   }

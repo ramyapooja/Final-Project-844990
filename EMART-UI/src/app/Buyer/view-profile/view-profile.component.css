@@ -4,3 +4,8 @@
 .container{
     width: 60%
 }
+.card{
+    background-image: url("src/assets/images/card.png");
+    width:600px;
+    
+}

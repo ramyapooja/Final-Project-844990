@@ -57,8 +57,10 @@ export class AddItemsComponent implements OnInit {
   onSubmit()
   {
     this.submitted=true;
+    if(this.itemForm.valid)
+    {
     this.Add();
-    
+    }
   }
   get f()
 {
@@ -71,8 +73,7 @@ Add()
     this.item.subcategoryId=(this.itemForm.value["subcategoryId"]);
     this.item.sellerId=localStorage.getItem('sellerId');
     this.item.itemId='I'+Math.floor(Math.random()*1000);
-    this.item.categoryId=this.itemForm.value["categoryId"];
-    this.item.subcategoryId=this.itemForm.value["subcategoryId"];
+   
     this.item.price=this.itemForm.value["price"];
     this.item.itemName=this.itemForm.value["itemName"];
     this.item.description=this.itemForm.value["description"];

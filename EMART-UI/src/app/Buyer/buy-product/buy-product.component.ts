@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BuyerService } from 'src/app/Services/buyer.service';
 import { Router } from '@angular/router';
 import { TransactionHistory } from 'src/app/Models/transaction-history';
+import { Cart } from 'src/app/Models/cart';
+import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-buy-product',
@@ -13,8 +15,10 @@ import { TransactionHistory } from 'src/app/Models/transaction-history';
 export class BuyProductComponent implements OnInit {
   item:Items;
   itemlist:Items[];
+  cart:Cart;
   buyerForm:FormGroup;
   tobj:TransactionHistory;
+  submitted:boolean=false;
   constructor(private formbuilder:FormBuilder,private service:BuyerService,private route:Router) { }
 
   ngOnInit() {
@@ -34,8 +38,19 @@ export class BuyProductComponent implements OnInit {
     console.log(this.item.itemId);
     
   }
- onSubmit()
+  onSubmit()
+  {
+    this.submitted=true;
+    if(this.buyerForm.valid)
+    {
+      this.Purchase();
+    }
+    
+    
+  }
+ Purchase()
  {
+
    this.tobj=new TransactionHistory();
    this.tobj.id='T'+Math.floor(Math.random()*1000);
    this.tobj.transactionId=this.tobj.id;

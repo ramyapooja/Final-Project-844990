@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BuyerService } from 'src/app/Services/buyer.service';
+import { Items } from 'src/app/Models/items';
 
 @Component({
   selector: 'app-buyer-landing-page',
@@ -8,10 +10,18 @@ import { Router } from '@angular/router';
 })
 export class BuyerLandingPageComponent implements OnInit {
   collapse:boolean=true;
-  constructor(private route:Router) {
+  count:number;
+  list:Items[];
+  user:string;
+  constructor(private route:Router,private service:BuyerService) {
     if(!(localStorage.getItem('token'))){
       this.route.navigateByUrl('/home');
     }
+    let bid=localStorage.getItem('buyerId');
+    this.service.GetCount(bid).subscribe(res=>{
+      this.count=res;
+      console.log(this.count);
+    })
    }
 
   ngOnInit() {

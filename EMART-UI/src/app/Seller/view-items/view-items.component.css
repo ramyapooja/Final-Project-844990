@@ -2,4 +2,5 @@
     width: 75%;
     table-layout: fixed;
     font-size:10px;
+    background-image: url("src/assets/images/card.png");
 }

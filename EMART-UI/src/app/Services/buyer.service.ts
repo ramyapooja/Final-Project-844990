@@ -38,9 +38,9 @@ export class BuyerService {
 
     return this.http.post<any>(this.url+'AddtoCart',cart,Requestheaders);
   }
-  public GetCartItems():Observable<any>
+  public GetCartItems(id:String):Observable<any>
   {
-    return this.http.get<any>(this.url+'GetCartItems',Requestheaders);
+    return this.http.get<any>(this.url+'GetCartItems/'+id,Requestheaders);
   }
   public RemoveCartItem(Id:string):Observable<any>
   {

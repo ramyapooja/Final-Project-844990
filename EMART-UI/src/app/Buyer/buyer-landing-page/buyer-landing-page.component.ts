@@ -14,14 +14,14 @@ export class BuyerLandingPageComponent implements OnInit {
   list:Items[];
   user:string;
   constructor(private route:Router,private service:BuyerService) {
-    if(!(localStorage.getItem('token3'))){
+    if(!(localStorage.getItem('token'))){
       this.route.navigateByUrl('/home');
     }
-    let bid=localStorage.getItem('buyerId');
-    this.service.GetCount(bid).subscribe(res=>{
-      this.count=res;
-      console.log(this.count);
-    })
+    // let bid=localStorage.getItem('buyerId');
+    // this.service.GetCount(bid).subscribe(res=>{
+    //   this.count=res;
+    //   console.log(this.count);
+    // })
    }
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class BuyerLandingPageComponent implements OnInit {
   {
     localStorage.clear();
     localStorage.removeItem('buyerId');
-    localStorage.removeItem('token3');
+    localStorage.removeItem('token');
     localStorage.removeItem('sellerId');
     this.route.navigateByUrl('/home');
   }

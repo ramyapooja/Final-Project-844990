@@ -46,10 +46,10 @@ export class AddItemsComponent implements OnInit {
       
       categoryId:[''],
       subcategoryId:[''],
-      price:['',[Validators.required,Validators.pattern('^[0-9]{9}$')]],
-      itemName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{3,15}$')]],
+      price:['',[Validators.required,Validators.pattern('^[0-9]+$')]],
+      itemName:['',[Validators.required,Validators.pattern('^[a-z A-Z]{3,15}$')]],
       description:[''],
-      stockNumber:['',[Validators.required],Validators.pattern('^[0-9]{5}$')],
+      stockNumber:['',[Validators.required,Validators.pattern('^[0-9]+$')]],
       remarks:[''],
       img:['']
     });
@@ -60,6 +60,7 @@ export class AddItemsComponent implements OnInit {
     if(this.itemForm.valid)
     {
     this.Add();
+    alert('success');
     }
   }
   get f()

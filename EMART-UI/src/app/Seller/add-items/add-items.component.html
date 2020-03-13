@@ -12,7 +12,7 @@
        
         <div class="form-group">
             <label>Select Category</label>
-                 <select formControlName="categoryId" class="form-control" (change)="GetSubCategories()" [ngClass]="{ 'is-invalid': submitted && f.categoryName.errors }" id="b" >
+                 <select formControlName="categoryId" class="form-control" (change)="GetSubCategories()" [ngClass]="{ 'is-invalid': submitted && f.categoryId.errors }" id="b" >
                   <option *ngFor="let lst of categorylist" [value]="lst.categoryId">{{lst.categoryName}}</option>
                   </select>
                   <div *ngIf="submitted && f.categoryId.errors" class="invalid-feedback">
@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <label>Select SubCategory</label>
-                 <select formControlName="subcategoryId" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.subcategoryName.errors }" id="b" >
+                 <select formControlName="subcategoryId" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.subcategoryId.errors }" id="b" >
                   <option *ngFor="let lst of subcategorylist" [value]="lst.subcategoryId">{{lst.subcategoryName}}</option>
                   </select>
                   <div *ngIf="submitted && f.subcategoryId.errors" class="invalid-feedback">
@@ -42,10 +42,7 @@
             <div *ngIf="f.itemName.errors.pattern">Invalid item name</div>
             </div>
         </div>
-        <div class="form-group">
-            <label>Description</label>
-            <input type="text" formControlName="description" class="form-control" id=a1/>
-        </div>
+       
         
         
        
@@ -58,12 +55,16 @@
             </div>
         </div>
         <div class="form-group">
+            <label>Description</label>
+            <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" id=a1/>
+        </div>
+        <div class="form-group">
             <label>Remarks</label>
-            <input type="text" formControlName="remarks" class="form-control" id=a1/>
+            <input type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" id=a1/>
         </div>
         <div class="form-group">
             <label>Image</label>
-            <input type="file" formControlName="img" (change)="fileEvent($event)">
+            <input type="file" formControlName="img" (change)="fileEvent($event)"  />
             <br><br>
             
         </div>

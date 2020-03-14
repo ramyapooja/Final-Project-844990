@@ -22,15 +22,15 @@ namespace EMart.Test
         {
             _repo.BuyerRegister(new Buyer()
             {
-                BuyerId = "B0010",
-                UserName = "Jay",
-                EmailId = "jay@gmail.com",
-                Password = "jay123",
-                MobileNo = "9898989898",
+                BuyerId = "B0016",
+                UserName = "mouni",
+                EmailId = "mouni@gmail.com",
+                Password = "mouni123",
+                MobileNo = "9898989891",
                 CreatedDateTime = DateTime.Now
             }
                 );
-            var result=_repo.BuyerLogin("Jay", "jay123");
+            var result=_repo.BuyerLogin("mouni", "mouni123");
             Assert.NotNull(result);
         }
         [Test]
@@ -38,34 +38,34 @@ namespace EMart.Test
         {
             _repo.SellerRegister(new Seller()
             {
-                SellerId = "S0010",
-                UserName = "sravs",
+                SellerId = "S0016",
+                UserName = "suji",
                 
-                Password = "sravs123",
-                CompanyName = "asdf",
-                Gstin = "19",
-                BriefDetails = "nukjnjnvaf",
-                PostalAddress = "Hyderabad",
-                Website = "abc.com",
-                EmailId = "sravs@gmail.com",
-                MobileNo = "8787878787"
+                Password = "suji123",
+                CompanyName = "asdfg",
+                Gstin = "20",
+                BriefDetails = "",
+                PostalAddress = "Bangalore",
+                Website = "abcd.com",
+                EmailId = "suji@gmail.com",
+                MobileNo = "8787878786"
             }
                 );
-            var result = _repo.SellerLogin("sravs", "sravs123");
+            var result = _repo.SellerLogin("suji", "suji123");
             Assert.NotNull(result);
         }
         [Test]
         [Description("Test BuyerLogin()")]
         public void BuyerLogin()
         {
-            var result=_repo.BuyerLogin("sai", "sai123");
+            var result=_repo.BuyerLogin("suji", "suji123");
             Assert.NotNull(result);
         }
         [Test]
         [Description("Test SellerLogin()")]
         public void SellerLogin()
         {
-            var result = _repo.SellerLogin("hema", "hema123");
+            var result = _repo.SellerLogin("suji", "suji123");
             Assert.NotNull(result);
         }
 

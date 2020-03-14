@@ -60,12 +60,12 @@ namespace EMart.Test
         {
             _repo.BuyItem(new TransactionHistory()
             {
-                Id = "T001",
+                Id = "T002",
                 BuyerId = "B0010",
                 SellerId = "S0010",
-                TransactionId = "T001",
+                TransactionId = "T002",
                 ItemId = "I443",
-                NumberOfItems = "5",
+                NumberOfItems = "4",
                 DateTime=DateTime.Now,
                 Remarks="",
                 TransactionType="debit"
@@ -87,20 +87,20 @@ namespace EMart.Test
         {
             _repo.AddtoCart(new Cart()
             {
-                Id="C001",
+                Id="C006",
                 CategoryId="C165",
                 SubcategoryId="SC14",
                 SellerId="1",
                 ItemId="I443",
                 ItemName="AC",
                 Price="80000",
-                Description="",
-                StockNumber="5",
+                Description="xvsdb",
+                StockNumber="4",
                 Img="ac.jpg",
-                BuyerId="1"
+                BuyerId="B0010"
             }
                 );
-            var result = _repo.ViewCart("1", "I443");
+            var result = _repo.ViewCart("B0010", "I443");
             Assert.IsNotNull(result);
             
         }
@@ -109,7 +109,7 @@ namespace EMart.Test
         public void TestDeleteCartItems()
         {
             _repo.DeleteCartItems("C511");
-            var result = _repo.GetCartItem("C325");
+            var result = _repo.GetCartItem("C511");
 
             Assert.Null(result);
         }
@@ -117,7 +117,7 @@ namespace EMart.Test
         [Description("Test GetCartItems(BuyerId)")]
         public void TestGetCartItem()
         {
-            var result = _repo.GetCartItems("B4");
+            var result = _repo.GetCartItems("B001");
             Assert.IsNotNull(result);
         }
 

@@ -2,7 +2,6 @@ D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcorea
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcoreapp3.1\EMart.AccountService.exe
-D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\obj\Debug\netcoreapp3.1\EMart.AccountService.csprojAssemblyReference.cache
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\obj\Debug\netcoreapp3.1\staticwebassets\EMart.AccountService.StaticWebAssets.Manifest.cache
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\obj\Debug\netcoreapp3.1\staticwebassets\EMart.AccountService.StaticWebAssets.xml
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\obj\Debug\netcoreapp3.1\EMart.AccountService.AssemblyInfoInputs.cache
@@ -127,4 +126,4 @@ D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcorea
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\obj\Debug\netcoreapp3.1\EMart.AccountService.MvcApplicationPartsAssemblyInfo.cache
+D:\Final-Project-RamyaPooja-844990\EMart\EMart.AccountService\obj\Debug\netcoreapp3.1\EMart.AccountService.csprojAssemblyReference.cache

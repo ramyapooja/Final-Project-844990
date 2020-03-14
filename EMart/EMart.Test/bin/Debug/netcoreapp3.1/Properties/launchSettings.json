@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:61273",
+      "applicationUrl": "http://localhost:61265",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "EMart.AccountService": {
+    "EMart.SellerService": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

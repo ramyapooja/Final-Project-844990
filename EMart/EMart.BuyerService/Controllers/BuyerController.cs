@@ -20,17 +20,17 @@ namespace EMart.BuyerService.Controllers
             _ibuyrepo = repo;
         }
         [HttpGet]
-        [Route("SearchItem/{name}")]
+        [Route("SearchItem/{ItemName}")]
 
-        public IActionResult SearchItems(string name)
+        public IActionResult SearchItems(string ItemName)
         {
             try
             {
-                return Ok(_ibuyrepo.SearchItems(name));
+                return Ok(_ibuyrepo.SearchItems(ItemName));
             }
             catch (Exception e)
             {
-                return NotFound(e.Message);
+                return NotFound(e.InnerException.Message);
             }
         }
 
@@ -189,7 +189,7 @@ namespace EMart.BuyerService.Controllers
             }
         }
         [HttpGet]
-        [Route("GetCartItems")]
+        [Route("GetCartItems/{BuyerId}")]
         public IActionResult GetCartItems(string bid)
         {
             try
@@ -214,19 +214,19 @@ namespace EMart.BuyerService.Controllers
                 return NotFound(ex.Message);
             }
         }
-        [HttpGet]
-        [Route("GetCount/{buyerid}")]
-        public IActionResult GetCount(string buyerid)
-        {
-            try
-            {
-                return Ok(_ibuyrepo.GetCount(buyerid));
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
-        }
+        //[HttpGet]
+        //[Route("GetCount/{buyerid}")]
+        //public IActionResult GetCount(string buyerid)
+        //{
+        //    try
+        //    {
+        //        return Ok(_ibuyrepo.GetCount(buyerid));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return NotFound(ex.Message);
+        //    }
+        //}
 
     }
 }

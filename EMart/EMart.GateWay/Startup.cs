@@ -31,7 +31,15 @@ namespace EMart.GateWay
         {
             services.AddControllers();
             services.AddOcelot(Configuration);
-            
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+                 options.AllowAnyOrigin()
+                         .AllowAnyMethod()
+                         .AllowAnyHeader()
+                         );
+            });
+
 
         }
 
@@ -46,6 +54,7 @@ namespace EMart.GateWay
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("AllowOrigin");
             //app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>

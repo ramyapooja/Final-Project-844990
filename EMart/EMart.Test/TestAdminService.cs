@@ -25,7 +25,7 @@ namespace EMart.Test
             _repo.AddCategory(new Category()
             {
                 CategoryId = "C0010",
-                CategoryName="Home appliances",
+                CategoryName="Homeappliances",
                 BriefDetails=""
 
             }) ;
@@ -41,10 +41,10 @@ namespace EMart.Test
             _repo.AddSubCategory(new SubCategory()
             {
                 SubcategoryId="SC008",
-                SubcategoryName="Furniture",
+                SubcategoryName="Furnitur",
                 CategoryId="C0010",
                 BriefDetails="Best Quality",
-                Gst="15"
+                Gst="18"
             }
                 );
             var result = _repo.GetSubcatById("SC008");
@@ -54,10 +54,10 @@ namespace EMart.Test
         [Description("UpdateCategory()")]
         public void TestUpdateCategory()
         {
-            Category category = _repo.GetCatById("C165");
+            Category category = _repo.GetCatById("C0010");
             category.BriefDetails = "Good quality";
             _repo.UpdateCategory(category);
-            Category category1 = _repo.GetCatById("C165");
+            Category category1 = _repo.GetCatById("C0010");
             Assert.AreEqual(category1, category);
 
         }

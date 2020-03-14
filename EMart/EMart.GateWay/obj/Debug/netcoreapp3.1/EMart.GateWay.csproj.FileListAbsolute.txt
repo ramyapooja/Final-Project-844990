@@ -32,5 +32,3 @@ D:\Final-Project-RamyaPooja-844990\EMart\EMart.GateWay\bin\Debug\netcoreapp3.1\S
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.GateWay\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.GateWay\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 D:\Final-Project-RamyaPooja-844990\EMart\EMart.GateWay\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Final-Project-RamyaPooja-844990\EMart\EMart.GateWay\obj\Debug\netcoreapp3.1\EMart.GateWay.MvcApplicationPartsAssemblyInfo.cs
-D:\Final-Project-RamyaPooja-844990\EMart\EMart.GateWay\obj\Debug\netcoreapp3.1\EMart.GateWay.MvcApplicationPartsAssemblyInfo.cache

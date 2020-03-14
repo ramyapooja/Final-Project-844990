@@ -75,7 +75,7 @@ namespace EMart.BuyerService
             app.UseCors("AllowOrigin");
 
             app.UseAuthorization();
-           // app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
